@@ -10,7 +10,7 @@ const EmployeeSearch = () => {
 
     const handleSearch = async () => {
         const response = await axios.get('/api/employees', {
-            params: { name, department, division, status }
+            params: { name, department, position, status }
         });
         setEmployees(response.data);
     };
