@@ -4,6 +4,9 @@ const jwt = require('jsonwebtoken');
 
 exports.register = async (req, res) => {
     const { username, password } = req.body;
+     if (req.user.role !== 'admin') {
+        return res.status(403).json({ message: 'Access denied' });
+    }
     const hashedPassword = await bcrypt.hash(password, 10);
     const newUser  = new User({ username, password: hashedPassword });
     await newUser .save();
