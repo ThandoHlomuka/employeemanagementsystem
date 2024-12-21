@@ -2,4 +2,4 @@
   
 <h4> Code updates will be added continously as I improve the software and its styling <h4/>
 
-by Thando Hlomuka
+<h6> by Thando Hlomuka <h6/>
