@@ -1,4 +1,5 @@
 import React from 'react';
+import employeeSearch from '../components/employeeSearch';
 
 const EmployeeList = ({ employees }) => {
   return (
