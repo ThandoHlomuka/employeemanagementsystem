@@ -1,0 +1,21 @@
+/* src/assets/mixins.css */
+@mixin transition($property, $duration) {
+    transition: $property $duration;
+}
+
+.btn {
+    @include transition(background-color, 0.3s);
+    border-radius: 4px;
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
