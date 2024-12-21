@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.post('/', authMiddleware, roleMiddleware (['admin', 'executive', 'manager']), createEmployee);
 router.get('/', authMiddleware, getEmployees);
+router.get('/', authMiddleware, getFilteredEmployees);
 router.put('/:id' authMiddleware,  roleMiddleware (['admin', 'executive', 'manager']), updateEmployee);
 router.delete('/:id', authMiddleware,  roleMiddleware (['admin', 'executive', 'manager']) deleteEmployee);
 
